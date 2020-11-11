@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-11-08 15:29:58
+ * @LastEditTime: 2020-11-11 09:01:31
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /egg-example-lemon/config/config.default.ts
+ */
 import { EggAppConfig, EggAppInfo, PowerPartial } from 'egg';
 
 export default (appInfo: EggAppInfo) => {
@@ -8,7 +16,11 @@ export default (appInfo: EggAppInfo) => {
   config.keys = appInfo.name + '_1604820589257_4135';
 
   // add your egg config in here
-  config.middleware = [];
+  config.middleware = [ 'printdate' ];
+
+  config.printdate = {
+    param1: 'aaa',
+  };
 
   // add your special config in here
   const bizConfig = {
